@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
+
+#SPMEDI{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 550px;
+    width: 100px;
+}
+#mensagem{
+    font-family: 'Gilda Display', serif;
+    margin-left: 540px;
+    margin-top: 150px;
+    font-style: italic;
+}
+#suporte{
+    margin-left: 620px;
+    margin-top: 300px;
+    font-family: 'Gilda Display', serif;
+    font-size: 20px;
+}
+#fone{
+    margin-left: 840px;
+    margin-top: -50px;
+}

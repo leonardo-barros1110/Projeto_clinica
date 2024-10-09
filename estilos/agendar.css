@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
+*{
+
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: 0;
+}
+#contato{
+    font-size: 20px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 14px;
+    gap: 10px;
+    font-family: 'Gilda Display', serif;
+}
+
+#cabeçalho{
+    border-top: 1px solid black;
+    font-size: 24px;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    padding: 15px;
+    gap: 80px;
+    border-bottom: 1px solid black;
+    font-family: 'Gilda Display', serif;
+}
+#home:hover{
+    border-bottom: 2px solid black;
+}
+
+#aclinica:hover{
+    border-bottom: 2px solid black;
+}
+#entrar:hover{
+    border-bottom: 2px solid black;
+}
+
+#agendar{
+    border-bottom: 2px solid black;
+}
+#agende{
+    position: absolute;
+    font-family: 'Gilda Display', serif;
+    font-size:30px;
+    margin-left: 620px;
+    margin-top: 30px;
+}
+#esp{
+    position: absolute;
+    margin-top: 80px;
+    margin-left: 300px;
+    border: 1px solid black;
+    outline: none;
+    padding: 10px;
+    width: 800px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+}
+
+#doutor{
+    position: absolute;
+    border: 1px solid black;
+    outline: none;
+    padding: 10px;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+    margin-left: 300px;
+    margin-top: 130px;
+}
+
+#data{
+    position: absolute;
+    border: 1px solid black;
+    outline: none;
+    padding: 10px;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+    margin-left: 300px;
+    margin-top: 180px;
+}
+
+#conv{
+    position: absolute;
+    border: 1px solid black;
+    outline: none;
+    padding: 10px;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+    margin-left: 300px;
+    margin-top: 230px;
+}
+
+#login{
+    position: absolute;
+    font-family: 'Gilda Display', serif;
+    margin-top: 380px;
+    margin-left: 686px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+#cad{
+    position: absolute;
+    font-family: 'Gilda Display', serif;
+    margin-top: 420px;
+    margin-left: 692px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+

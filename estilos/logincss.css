@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
+
+#SPMEDI{
+    display: flex;
+    margin-top: -230px;
+    margin-left: -40px;
+    
+}
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #ffffff;
+   
+}
+div{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    padding: 80px;
+    border-radius: 15px;
+    color: rgb(0, 0, 0); 
+
+
+}
+input{
+    height: 10px;   
+    width: 400px;
+    padding: 18px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    background-color: #8ec3cd;
+}
+button{
+    background-color: #8ec3cd;
+    border: none;
+    padding-bottom: 30px;
+    padding-left: 5px;
+    padding-top: 10px;
+    width: 100%;
+    margin-left: 18px;
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    cursor: pointer;
+    margin-bottom: 10px;
+   
+
+
+}
+button:hover{
+    background-color: rgb(161, 179, 184);
+}
+#fundo{
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
+#enviar{
+    height: 3px;
+    width: 200px;
+    margin-top: 25px;
+    margin-left: 90px;
+    border-radius: 25px;
+    font-family: 'Gilda Display', serif;
+   
+   
+}
+
+#esqueceu{
+    font-family: 'Gilda Display', serif;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: -5px;
+    text-decoration: none;
+    color: black;
+    position:absolute;
+    font-size: 17px;
+    
+}
+#login{
+    font-family: 'Gilda Display', serif;
+    font-size: medium;
+    
+
+   
+}
+#cadastre{
+    font-family: 'Gilda Display', serif;
+    font-size: 25px; 
+    margin-top: 500px;
+    margin-left: 676px;
+}
+#olho{
+    margin-top: 65px;
+    margin-left: 190px;
+}
+#suporte{
+    font-family: 'Gilda Display', serif;
+    margin-left: 640px;
+    font-size: 25px; 
+
+}
+#fone{
+    margin-top: 274px;
+    margin-left: 109px;
+}
+#seta{
+    margin-left: -730px;
+    margin-top: -250px;
+
+}

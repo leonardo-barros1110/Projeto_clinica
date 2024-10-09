@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
+
+
+#SPMEDI{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 550px;
+    width: 100px;
+
+}
+#mensagem{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    margin-left: 460px;
+    margin-top: 80px;
+    font-style: italic;
+    
+}
+#barra1{
+    margin-left: 500px;
+    margin-top: 110px;
+    border-radius: 15px;
+    border: none;
+}
+#inp1{
+    background-color: #8ec3cd;
+    width: 450px;
+    border: none;
+    outline: none;
+    padding: 15px;
+    border-radius: 15px;
+}
+#enviar{
+    margin-top: 100px;
+    margin-left: 640px;
+    
+}
+#style{
+    width: 170px;
+    background-color: #8ec3cd;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    font-family: 'Gilda Display', serif;
+    font-size: 20px;
+    cursor: pointer;
+    
+    
+}
+#seta{
+    margin-top: -520px;
+}
+#suporte{
+    margin-top: 600px;
+    margin-left: 635px;
+    font-size: 20px;
+    font-family: 'Gilda Display', serif;
+    height: 40px;
+    width: 200px;
+}
+#fonin{
+    margin-top: -25px;
+    margin-left: 420px;
+}
+#style:hover{
+   background-color:  rgb(161, 179, 184);
+}
