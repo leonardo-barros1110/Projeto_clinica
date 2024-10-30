@@ -1,5 +1,5 @@
 <?php
-require_once 'app/models/Paciente.php';
+require_once 'app/model/Paciente.php';
 
 class PacienteController {
 
@@ -23,7 +23,8 @@ class PacienteController {
 
     // Definindo os métodos para evitar erros de chamada
     public function showForm() {
-        echo "Exibir formulário de cadastro.";
+        // Exibe o formulário de cadastro de livros
+        require_once '../views/paginas/cadastro.html';
     }
 
     public function saveBook() {
