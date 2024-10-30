@@ -14,12 +14,17 @@ switch ($request) {
     case '/':
     case '/index':
     case '/index.php':
+        $controller = new PacienteController;
         $controller->showForm();
         break;
     case '/save-book':
+        
+        $controller = new PacienteController;
         $controller->saveBook();
         break;
     case '/list-books':
+        
+        $controller = new PacienteController;
         $controller->listBooks();
         break;
     default:
