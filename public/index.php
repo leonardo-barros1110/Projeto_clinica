@@ -8,25 +8,19 @@ require_once '../controllers/PacienteController.php';
 
 // Lógica de roteamento
 $request = $_SERVER['REQUEST_URI'];
-$controller = new PacienteController();
+
 
 switch ($request) {
-    case '/':
-    case '/index':
-    case '/index.php':
+    case '/Projeto_clinica/public/':
         $controller = new PacienteController;
         $controller->showForm();
         break;
     case '/save-book':
         
         $controller = new PacienteController;
-        $controller->saveBook();
+        $controller->cadastrarPaciente();
         break;
-    case '/list-books':
-        
-        $controller = new PacienteController;
-        $controller->listBooks();
-        break;
+    
     default:
         http_response_code(404);
         echo "Página não encontrada.";

@@ -1,14 +1,19 @@
 <?php
-require_once 'config/database.php';
+require_once '../config/database.php';
 
 class Paciente {
     private $conn;
-    private $table = 'pacientes';
+    private $table_name = "paciente";
+    
     public $nome;
-    public $data_nascimento;
-    public $cpf;
     public $convenio;
+    public $cpf;
     public $telefone;
+    public $email;
+    public $data_nascimento;
+
+
+
 
     public function __construct() {
         $database = new Database();
@@ -16,7 +21,7 @@ class Paciente {
     }
 
     public function cadastrar() {
-        $query = "INSERT INTO " . $this->table . " (nome, data_nascimento, cpf, convenio, telefone) VALUES (:nome, :data_nascimento, :cpf, :convenio, :telefone)";
+        $query = "INSERT INTO " . $this->table_name . " (nome, data_nascimento, cpf, convenio, telefone) VALUES (:nome, :data_nascimento, :cpf, :convenio, :telefone)";
         $stmt = $this->conn->prepare($query);
 
         $stmt->bindParam(":nome", $this->nome);
@@ -24,6 +29,7 @@ class Paciente {
         $stmt->bindParam(":cpf", $this->cpf);
         $stmt->bindParam(":convenio", $this->convenio);
         $stmt->bindParam(":telefone", $this->telefone);
+        $stmt->bindParam(":email", $this->email);
 
         if ($stmt->execute()) {
             return true;
@@ -33,7 +39,7 @@ class Paciente {
         return false;
     }
     public function getall(){
-        $query = "SELECT * FROM" . $this->table;
+        $query = "SELECT * FROM" . $this->table_name;
         $stmt = $this->conn->prepare(($query));
         $stmt ->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);

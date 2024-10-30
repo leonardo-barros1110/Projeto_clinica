@@ -1,5 +1,5 @@
 <?php
-require_once 'app/model/Paciente.php';
+require_once '../model/Paciente.php';
 
 class PacienteController {
 
@@ -12,6 +12,7 @@ class PacienteController {
             $paciente->cpf = $_POST['cpf'];
             $paciente->convenio = $_POST['convenio'];
             $paciente->telefone = $_POST['telefone'];
+            $paciente->email = $_POST['email'];
 
             if ($paciente->cadastrar()) {
                 echo "Paciente cadastrado com sucesso!";
@@ -24,7 +25,7 @@ class PacienteController {
     // Definindo os métodos para evitar erros de chamada
     public function showForm() {
         // Exibe o formulário de cadastro de livros
-        require_once '../views/paginas/cadastro.html';
+        require_once '../views/paginas/cadastrodpPacinte.html';
     }
 
     public function saveBook() {
