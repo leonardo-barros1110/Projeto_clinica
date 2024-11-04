@@ -16,7 +16,6 @@ switch ($request) {
         $controller->showForm();
         break;
     case '/Projeto_clinica/public/save':
-        
         $controller = new PacienteController;
         $controller->cadastrarPaciente();
         break;
