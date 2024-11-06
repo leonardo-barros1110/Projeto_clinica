@@ -15,9 +15,9 @@ class Paciente {
     public function __construct() {
         $database = new Database();
         $this->conn = $database->getConnection();
-    }
+    } 
 
-    public function cadastrar() {
+    public function cadastrarPac() {
         $query = "INSERT INTO " . $this->table_name . " (nome, data_nascimento, cpf, convenio, telefone, email) VALUES (:nome, :data_nascimento, :cpf, :convenio, :telefone, :email)";
         $stmt = $this->conn->prepare($query);
     

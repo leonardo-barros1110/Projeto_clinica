@@ -1,7 +1,7 @@
 <?php
 require_once '../config/database.php';
 
-class Paciente {
+class medico {
     private $conn;
     private $table_name = "medico";
     
@@ -17,7 +17,7 @@ class Paciente {
         $this->conn = $database->getConnection();
     }
 
-    public function cadastrar() {
+    public function cadastrarMed() {
         $query = "INSERT INTO " . $this->table_name . " (nome, email, crm, especialidade, telefone, endereco) VALUES (:nome, :email, :crm, :especialidade, :telefone, :endereco)";
         $stmt = $this->conn->prepare($query);
     

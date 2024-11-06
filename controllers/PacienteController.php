@@ -14,7 +14,14 @@ class PacienteController {
             $paciente->telefone = $_POST['telefone'];
             $paciente->email = $_POST['email'];
 
-            if ($paciente->cadastrar()) {
+
+
+
+
+
+
+
+            if ($paciente->cadastrarPac()) {
                 echo "Paciente cadastrado com sucesso!";
                 
             } else {
@@ -35,5 +42,10 @@ class PacienteController {
 
     public function listBooks() {
         echo "Listar todos os pacientes.";
+    }
+    public function list(){
+        $paciente =new Paciente();
+        $pacientes = $paciente->getAll();
+        require_once '../views/paginas/paciente_list.php';
     }
 }

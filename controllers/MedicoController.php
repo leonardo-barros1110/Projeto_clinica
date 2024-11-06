@@ -1,20 +1,20 @@
 <?php
 require_once '../model/medico.php';
 
-class PacienteController {
+class MedicoController {
 
-    public function cadastrarmedico() {
+    public function cadastrarMedico() {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $paciente = new Paciente();
+            $medico = new medico();
 
-            $paciente->nome = $_POST['nome'];
-            $paciente->data_nascimento = $_POST['email'];
-            $paciente->cpf = $_POST['crm'];
-            $paciente->convenio = $_POST['especialidade'];
-            $paciente->telefone = $_POST['telefone'];
-            $paciente->email = $_POST['endereco'];
+            $medico->nome = $_POST['nome'];
+            $medico->email = $_POST['email'];
+            $medico->crm = $_POST['crm'];
+            $medico->especialidade = $_POST['especialidade'];
+            $medico->telefone = $_POST['telefone'];
+            $medico->endereco = $_POST['endereco'];
 
-            if ($paciente->cadastrar()) {
+            if ($medico->cadastrarMed()) {
                 echo "Medico cadastrado com sucesso!";
                 
             } else {
@@ -24,9 +24,9 @@ class PacienteController {
     }
 
     // Definindo os métodos para evitar erros de chamada
-    public function showForm() {
+    public function showFormMedico() {
         // Exibe o formulário de cadastro de livros
-        require_once '../views/paginas/cadastrodpPacinte.html';
+        require_once '../views/paginas/cadastroMedico.html';
     }
 
     public function saveBook() {
