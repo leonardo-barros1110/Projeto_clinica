@@ -13,6 +13,9 @@ class PacienteController {
             $paciente->convenio = $_POST['convenio'];
             $paciente->telefone = $_POST['telefone'];
             $paciente->email = $_POST['email'];
+            $paciente->endereco = $_POST['endereco'];
+            
+
 
 
 

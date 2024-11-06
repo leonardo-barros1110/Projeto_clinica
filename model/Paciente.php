@@ -11,14 +11,16 @@ class Paciente {
     public $telefone;
     public $email;
     public $data_nascimento;
-
+    public $endereco;
+    
     public function __construct() {
         $database = new Database();
         $this->conn = $database->getConnection();
     } 
 
+
     public function cadastrarPac() {
-        $query = "INSERT INTO " . $this->table_name . " (nome, data_nascimento, cpf, convenio, telefone, email) VALUES (:nome, :data_nascimento, :cpf, :convenio, :telefone, :email)";
+        $query = "INSERT INTO " . $this->table_name . " (nome, data_nascimento, cpf, convenio, telefone, email, endereco) VALUES (:nome, :data_nascimento, :cpf, :convenio, :telefone, :email, :endereco)";
         $stmt = $this->conn->prepare($query);
     
         $stmt->bindParam(":nome", $this->nome);
@@ -27,6 +29,7 @@ class Paciente {
         $stmt->bindParam(":convenio", $this->convenio);
         $stmt->bindParam(":telefone", $this->telefone);
         $stmt->bindParam(":email", $this->email);
+        $stmt->bindParam(":endereco", $this->endereco);
     
         if ($stmt->execute()) {
             return true;
