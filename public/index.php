@@ -6,6 +6,7 @@ error_reporting(E_ALL);
 
 require_once '../controllers/PacienteController.php';
 require_once '../controllers/MedicoController.php';
+require_once '../controllers/AdmControllers.php';
 
 // Lógica de roteamento
 $request = $_SERVER['REQUEST_URI'];
@@ -32,11 +33,16 @@ switch ($request) {
     case '/Projeto_clinica/views/paginas/paciente_list':
         $controller = new PacienteController;
         $controller->list();
-            break;
-    case '/Projeto_clinica/public/Administrador/save':
-        $controller = new MedicoController;
-        $controller->showFormMedico();
-            break;
+        break;
+    case '/Projeto_clinica/public/Administrador/show':
+        $controller = new AdmController;
+        $controller->showFormAdm();
+        break;
+    case '/Projeto_clinica/public/pipi/save':
+        $controller = new AdmController;
+        $controller->cadastrarAdmin();
+        break;
+    
     default:
         http_response_code(404);
         echo "Página não encontrada.";

@@ -3,7 +3,7 @@ require_once '../config/database.php';
 
 class Adm {
     private $conn;
-    private $table_name = "adminstrador";
+    private $table_name = "administrador";
     public $nome;
     public $departamento;
     public $telefone;
@@ -16,12 +16,12 @@ class Adm {
     } 
 
     public function cadastrarAdm() {
-        $query = "INSERT INTO " . $this->table_name . " (nome, data_nascimento, cpf, convenio, telefone, email) VALUES (:nome, :data_nascimento, :cpf, :convenio, :telefone, :email)";
+        $query = "INSERT INTO " . $this->table_name . " (nome, telefone, email, departamento, endereco) VALUES (:nome, :telefone, :email, :departamento, :endereco)";
         $stmt = $this->conn->prepare($query);
     
         $stmt->bindParam(":nome", $this->nome);
         $stmt->bindParam(":endereco", $this->endereco);
-        $stmt->bindParam(":depatamento", $this->departamento);
+        $stmt->bindParam(":departamento", $this->departamento);
         $stmt->bindParam(":telefone", $this->telefone);
         $stmt->bindParam(":email", $this->email);
     

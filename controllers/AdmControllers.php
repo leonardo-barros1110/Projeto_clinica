@@ -3,7 +3,7 @@ require_once '../model/adm.php';
 
 class AdmController {
 
-    public function cadastrarAdm() {
+    public function cadastrarAdmin() {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $adm = new adm();
             $adm->nome = $_POST['nome'];
@@ -23,7 +23,7 @@ class AdmController {
     }
 
     // Definindo os métodos para evitar erros de chamada
-    public function showFormMedico() {
+    public function showFormAdm() {
         // Exibe o formulário de cadastro de livros
         require_once '../views/paginas/cadastroAdm.html';
     }
