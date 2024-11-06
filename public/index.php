@@ -24,8 +24,6 @@ switch ($request) {
         $controller = new MedicoController;
         $controller->cadastrarMedico();
         break;
-        
-
     case '/Projeto_clinica/public/Medico/Home':
         $controller = new MedicoController;
         $controller->showFormMedico();
@@ -34,6 +32,10 @@ switch ($request) {
     case '/Projeto_clinica/views/paginas/paciente_list':
         $controller = new PacienteController;
         $controller->list();
+            break;
+    case '/Projeto_clinica/public/Administrador/save':
+        $controller = new MedicoController;
+        $controller->showFormMedico();
             break;
     default:
         http_response_code(404);

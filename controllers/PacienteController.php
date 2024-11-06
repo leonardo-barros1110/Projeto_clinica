@@ -46,6 +46,6 @@ class PacienteController {
     public function list(){
         $paciente =new Paciente();
         $pacientes = $paciente->getAll();
-        require_once '../views/paginas/paciente_list.php';
+        require_once './views/paginas/paciente_list.php';
     }
 }
