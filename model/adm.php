@@ -15,7 +15,7 @@ class Adm {
         $this->conn = $database->getConnection();
     } 
 
-    public function cadastrarAdm() {
+    public function cadastrarAdm() {   
         $query = "INSERT INTO " . $this->table_name . " (nome, telefone, email, departamento, endereco) VALUES (:nome, :telefone, :email, :departamento, :endereco)";
         $stmt = $this->conn->prepare($query);
     

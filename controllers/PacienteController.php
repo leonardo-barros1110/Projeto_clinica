@@ -14,16 +14,6 @@ class PacienteController {
             $paciente->telefone = $_POST['telefone'];
             $paciente->email = $_POST['email'];
             $paciente->endereco = $_POST['endereco'];
-            
-
-
-
-
-
-
-
-
-
             if ($paciente->cadastrarPac()) {
                 echo "Paciente cadastrado com sucesso!";
                 

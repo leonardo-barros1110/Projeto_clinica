@@ -27,7 +27,7 @@
     <?php foreach ($pacientes as $paciente): ?>
     <tr>
         <td><?php echo htmlspecialchars ($paciente['nome']); ?></td>
-        <td><?php echo htmlspecialchars($paciente['data_nascimeto']); ?></td>
+        <td><?php echo htmlspecialchars ($paciente['data_nascimeto']); ?></td>
         <td><?php echo  htmlspecialchars ($paciente['cpf']); ?></td>
         <td><?php echo  htmlspecialchars ($paciente['convenio']); ?></td>
         <td><?php echo  htmlspecialchars ($paciente['endereco']); ?></td>
