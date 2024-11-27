@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,9 +30,17 @@
                 <td><?php echo htmlspecialchars($paciente['endereco']); ?></td>
                 <td><?php echo htmlspecialchars($paciente['telefone']); ?></td>
                 <td><?php echo htmlspecialchars($paciente['email']); ?></td>
+                <td><a href="/Projeto_clinica/views/paginas/update-paciente/<?php echo $paciente['cpf']; ?>">Atualizar</a></td>
+             <!--   <td><a href="/Projeto_clinica/views/paginas/atualizar.php/<?php echo $paciente['cpf']; ?>">Atualizar</a></td> -->
+            <!-- Formulário para deletar o livro -->
+            <td><form action="/Projeto_clinica/views/paginas/excluir-paciente" method="POST" style="display:inline;">
+                <input type="hidden" name="title" value="">
+                <button type="submit">Excluir</button>
+            </form></td>
             </tr>
             <?php endforeach; ?>
         </table>
+        
     <?php else: ?>
         <p>Nenhum paciente cadastrado.</p>
     <?php endif; ?>

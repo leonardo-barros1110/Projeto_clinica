@@ -40,4 +40,27 @@ class PacienteController {
         $pacientes = $paciente->getAll();
         include '../views/paginas/paciente_list.php';
     }
+    public function showUpdateForm($id) {
+        $paciente = new Paciente();
+        $pacientes = $paciente->getByCpf($id);
+        include '../views/paginas/atualizar.php'; // Inclua o arquivo do formulário de atualização
+    }
+    public function updatePac() {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $paciente = new Paciente();
+            $paciente->nome = $_POST['nome'];
+            $paciente->data_nascimento = $_POST['data_nascimento'];
+            $paciente->endereco = $_POST['endereco'];
+            $paciente->telefone = $_POST['telefone'];
+            $paciente->email = $_POST['email'];
+            $paciente->convenio = $_POST['convenio'];
+            $paciente->cpf = $_POST['cpf'];
+
+            if ($paciente->update()) {
+                header('Location: /projeto_clinica/views/paginas/paciente_list');
+            } else {
+                echo "Erro ao atualizar o paciente.";
+            }
+        }
+    }
 }

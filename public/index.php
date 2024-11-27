@@ -40,8 +40,20 @@ switch ($request) {
         break;
     case '/Projeto_clinica/public/pipi/save':
         $controller = new AdmController();
-        $controller->cadastrarAdmin();
+        $controller->cadastrarAdmin();                        /*/Projeto_clinica/views/paginas/update-paciente */
         break;
+    case (preg_match('/\/Projeto_clinica\/views\/paginas\/update-paciente\/(\d+)/', $request, $matches) ? true : false):
+            $cpf = $matches[1];
+            require_once '../controllers/PacienteController.php';
+            $controller = new PacienteController();
+            $controller->showUpdateForm($cpf);
+            break;
+    
+    case '/Projeto_clinica/public/pipi/update-paciente':   
+            require_once '../controllers/PacienteController.php';
+            $controller = new PacienteController();
+            $controller->updatePac();
+            break;
     
     default:
         http_response_code(404);
