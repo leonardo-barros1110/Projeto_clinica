@@ -13,33 +13,33 @@ $request = $_SERVER['REQUEST_URI'];
 
 
 switch ($request) {
-    case '/Projeto_clinica/public/':
-        $controller = new PacienteController;
+    case '/Projeto_clinica/public/cadastro':
+        $controller = new PacienteController();
         $controller->showForm();
         break;
     case '/Projeto_clinica/public/Paciente/save':
-        $controller = new PacienteController;
+        $controller = new PacienteController();
         $controller->cadastrarPaciente();
         break;
     case '/Projeto_clinica/public/Medico/save':
-        $controller = new MedicoController;
+        $controller = new MedicoController();
         $controller->cadastrarMedico();
         break;
     case '/Projeto_clinica/public/Medico/Home':
-        $controller = new MedicoController;
+        $controller = new MedicoController();
         $controller->showFormMedico();
         break;
 
-    case '/Projeto_clinica/views/paginas/paciente_list':
-        $controller = new PacienteController;
+    case '/projeto_clinica/views/paginas/paciente_list':
+        $controller = new PacienteController();
         $controller->list();
         break;
     case '/Projeto_clinica/public/Administrador/show':
-        $controller = new AdmController;
+        $controller = new AdmController();
         $controller->showFormAdm();
         break;
     case '/Projeto_clinica/public/pipi/save':
-        $controller = new AdmController;
+        $controller = new AdmController();
         $controller->cadastrarAdmin();
         break;
     

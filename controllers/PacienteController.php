@@ -15,14 +15,13 @@ class PacienteController {
             $paciente->email = $_POST['email'];
             $paciente->endereco = $_POST['endereco'];
             if ($paciente->cadastrarPac()) {
-                echo "Paciente cadastrado com sucesso!";
-                
+                header('Location: /projeto_clinica/views/paginas/paciente_list');
+    
             } else {
                 echo "Erro ao cadastrar o paciente.";
             }
         }
     }
-
     // Definindo os métodos para evitar erros de chamada
     public function showForm() {
         // Exibe o formulário de cadastro de livros
@@ -36,9 +35,9 @@ class PacienteController {
     public function listBooks() {
         echo "Listar todos os pacientes.";
     }
-    public function list(){
-        $paciente =new Paciente();
+    public function list() {
+        $paciente = new Paciente();
         $pacientes = $paciente->getAll();
-        require_once './views/paginas/paciente_list.php';
+        include '../views/paginas/paciente_list.php';
     }
 }
