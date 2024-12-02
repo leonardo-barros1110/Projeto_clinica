@@ -75,9 +75,17 @@ public function getByCpf($cpf) {
     $stmt->execute();
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
+public function deletepac() {
+    $query = "DELETE FROM " . $this->table_name . " WHERE cpf = :cpf";
+    $stmt = $this->conn->prepare($query);
+    $stmt->bindParam(':cpf', $this->cpf);
 
-
-
+    return $stmt->execute();
 }
+}
+
+
+
+
 
 ?>

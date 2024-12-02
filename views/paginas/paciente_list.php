@@ -4,8 +4,99 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="../img/icone.png" type="image/x-icon">
     <title>Pacientes Cadastrados</title>
 </head>
+<style>
+    /* Reset básico */
+body, h1, table, th, td, p, a, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* Estilo da tabela */
+table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow-x: auto;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    color: #555;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c82333;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+}
+
+</style>
 <body>
     <h1>Pacientes Cadastrados</h1>
 
@@ -33,8 +124,8 @@
                 <td><a href="/Projeto_clinica/views/paginas/update-paciente/<?php echo $paciente['cpf']; ?>">Atualizar</a></td>
              <!--   <td><a href="/Projeto_clinica/views/paginas/atualizar.php/<?php echo $paciente['cpf']; ?>">Atualizar</a></td> -->
             <!-- Formulário para deletar o livro -->
-            <td><form action="/Projeto_clinica/views/paginas/excluir-paciente" method="POST" style="display:inline;">
-                <input type="hidden" name="title" value="">
+            <td><form action="/Projeto_clinica/views/paginas/pipi/excluir-paciente" method="POST" style="display:inline;">
+                <input type="hidden" name="cpf" value="<?php echo $paciente['cpf']; ?>">
                 <button type="submit">Excluir</button>
             </form></td>
             </tr>

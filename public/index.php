@@ -54,6 +54,11 @@ switch ($request) {
             $controller = new PacienteController();
             $controller->updatePac();
             break;
+    case '/Projeto_clinica/views/paginas/pipi/excluir-paciente':
+                require_once '../controllers/PacienteController.php';
+                $controller = new PacienteController();
+                $controller->deletepac();
+                break;
     
     default:
         http_response_code(404);
