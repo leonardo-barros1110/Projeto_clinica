@@ -9,14 +9,11 @@
     <title>Pacientes Cadastrados</title>
 </head>
 <style>
-    /* Reset básico */
 body, h1, table, th, td, p, a, button {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-/* Estilo geral da página */
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
@@ -33,7 +30,6 @@ h1 {
     color: #444;
 }
 
-/* Estilo da tabela */
 table {
     width: 100%;
     max-width: 800px;
@@ -122,8 +118,7 @@ p {
                 <td><?php echo htmlspecialchars($paciente['telefone']); ?></td>
                 <td><?php echo htmlspecialchars($paciente['email']); ?></td>
                 <td><a href="/Projeto_clinica/views/paginas/update-paciente/<?php echo $paciente['cpf']; ?>">Atualizar</a></td>
-             <!--   <td><a href="/Projeto_clinica/views/paginas/atualizar.php/<?php echo $paciente['cpf']; ?>">Atualizar</a></td> -->
-            <!-- Formulário para deletar o livro -->
+             <?php echo $paciente['cpf']; ?>">Atualizar</a></td>
             <td><form action="/Projeto_clinica/views/paginas/pipi/excluir-paciente" method="POST" style="display:inline;">
                 <input type="hidden" name="cpf" value="<?php echo $paciente['cpf']; ?>">
                 <button type="submit">Excluir</button>
